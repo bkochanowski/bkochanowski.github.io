@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<meta charset="UTF-8", name="viewport" content="width=device-width, initial-scale=1">
+	<title>Resume/CV design project</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<script src="https://kit.fontawesome.com/79152f2865.js" crossorigin="anonymous"></script>
+	<link href='https://fonts.googleapis.com/css?family=Quantico' rel='stylesheet'>
+	<style>	
+		* {
+		box-sizing: border-box;
+			}
+		}
+		body {
+		}
+		.wrapper {
+			display: flex;
+			padding: 10px;
+			margin: auto;
+			width: 70%;
+			height: 100vh;
+			overflow: hidden;
+			background-color: gray;
+		}
+		.navigation {
+			background-image: url('green mini.jpg');
+			font-size: 1em;
+			text-align: center;
+			height: 100%;
+			padding: 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			justify-content: space-between;
+			}
+		.name-header{
+			color: white;
+			font-family: 'Quantico';
+		}
+		.menu-element {
+			font-size: 1em;
+			text-align: left;
+			font-family: 'Quantico';
+			cursor: pointer;
+			margin-left: 15%;
+			}
+		.img-circle {
+			border-radius: 50%;
+			padding: 5px;
+			width: 150px;
+			height: 150px;
+			object-fit: contain;
+			padding:1px;
+			border:5px solid white;
+			}
+		.content-wrapper {
+			overflow: auto;
+			padding: 10px;
+			font-size: 1em;
+			background: white;
+			height: 95%
+			padding: 1rem;
+			overflow-y: auto;
+			direction: ltr;
+			scrollbar-color: #d4aa70 #e4e4e4;
+			scrollbar-width: thin;
+			}
+		.description {
+			font-family: 'Quantico';
+			font-size: 0.9em;
+			line-height: 1.5;
+			letter-spacing: normal;
+			font-weight: 600;
+			text-align: justify;
+			padding: 10px;
+			}
+		.description_projects {
+			font-size: 0.9em;
+			line-height: 1.5;
+			letter-spacing: normal;
+			font-weight: 600;
+			text-align: justify;
+			white-space: pre-line;
+			}
+		.animation {
+			background: none;
+			transition: background-color 1s ease-out 100ms
+			}
+		.animation:hover {
+			background-color: #bad1b4;
+            }
+		.achievement-wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			min-width: 300px;
+			padding: 20px;
+			row-gap: 1ch;
+			}
+		.achievement, .achievement-empty {
+				flex-basis: 49%;
+				flex-shrink: 1;
+				padding: 20px;
+				;
+			}
+		.article {
+			padding-left: 20px;
+			}
+		.article-header{
+			color: #b38600;
+		}
+		.img-scroll {
+			vertical-align: middle;
+			margin-left: 20%;
+			margin-right: 20%;
+		}
+		
+		/* Position the image container (needed to position the left and right arrows) */
+		.container {
+		  position: relative;
+		}
+		/* Hide the images by default */
+		.mySlides {
+			display: none;
+			margin: auto;
+			background-color: gray;
+		}
+		/* Add a pointer when hovering over the thumbnail images */
+		.cursor {
+		  cursor: pointer;
+		}
+		/* Next & previous buttons */
+		.prev,
+		.next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 40%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -50px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 20px;
+		  border-radius: 0 3px 3px 0;
+		  user-select: none;
+		  -webkit-user-select: none;
+		}
+
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover,
+		.next:hover {
+		  background-color: rgba(0, 0, 0, 0.8);
+		}
+
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		/* Container for image text */
+		.caption-container {
+		  text-align: center;
+		  background-color: #222;
+		  padding: 2px 16px;
+		  color: white;
+		}
+
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
+		}
+
+		/* Six columns side by side */
+		.column {
+		  float: left;
+		  width: 16.66%;
+		}
+
+		/* Add a transparency effect for thumnbail images */
+		.demo {
+		  opacity: 0.6;
+		}
+		
+		.active,
+		.demo:hover {
+		  opacity: 1;
+		}
+		.bckgrd {
+		background-color: #ccff99;
+		box-shadow: 5px 5px 3px grey;
+		border-radius: 5%;
+		}
+		
+		.button {
+		  border-radius: 2px;
+		  background-color: green;
+		  border: none;
+		  color: #FFFFFF;
+		  text-align: center;
+		  font-size: 14px;
+		  padding: 15px;
+		  width: 80%;
+		  transition: all 0.5s;
+		  cursor: pointer;
+		  margin: 2px;
+		}
+
+		.button span {
+		  cursor: pointer;
+		  display: inline-block;
+		  position: relative;
+		  transition: 0.5s;
+		}
+
+		.button span:after {
+		  content: '\00bb';
+		  position: absolute;
+		  opacity: 0;
+		  top: 0;
+		  right: -20px;
+		  transition: 0.5s;
+		}
+
+		.button:hover span {
+		  padding-right: 25px;
+		}
+
+		.button:hover span:after {
+		  opacity: 1;
+		  right: 0;
+		}
+	</style>
+</head>
+<body class="wrapper">
+	<nav class="navigation">
+		<div>
+			<h1 class="name-header">Bartłomiej Kochanowski</h1>
+			<img src="me.jpg" alt="avatar", class='img-circle'>
+		</div>
+		<div>
+			<p class='name-header'>Resume navigation</p>
+			<div class='animation'>
+				<p class='menu-element' data-name="description">Basic info</p>
+			</div>
+			<div class='animation'>
+				<p class='menu-element' data-name="achievement">My projects</p>
+			</div>
+			<div class='animation'>
+				<p class='menu-element' data-name="education">Education</p>
+			</div>
+			<div class='animation'>
+				<p class='menu-element' data-name="work">Work experience</p>
+			</div>
+			<div class='animation'>
+				<p class='menu-element' data-name="interests">Hobby</p>
+			</div>	
+		</div>
+		<p>Copyright 2021 ©</p>
+	</nav>
+		<main class='content-wrapper'>
+			<section>
+				<h1 class='section-header' id="description">About me:</h1>
+					<article  class="article">
+						<p class="description">
+						I'm a psychologist with few years of experience in work related to statistical analysis and operating on large data sets. 
+						Programming is my hobby. I have knowledge in the field of Python3.x with frameworks: Flask (advanced) and Django (beginner). 
+						In my projects I experimented with SQL (MySQL, SQLite3) and NoSQL (MongoDB) databases. I know the basics of the SCRUM, KANBAN 
+						and TDD methodology. Currently I am developing a project of a mobile application dedicated for the android platforms using  
+						an open source Python library - KIVY.
+						I am looking for professional development opportunities in QA field and as a programmer. 
+						
+						</p>
+					</article>
+			</section>
+			<section>
+				<h1 class="section-header" id="achievement">My projects:</h1>
+					<article  class="article">
+						<div class="achievement-wrapper">
+							<div class="achievement bckgrd">
+								<h3 class="article-header">Android application for managing tasks and shopping list: ToDoApp</h3>
+								<p class="description_projects">
+								Mobile application made in Python 3.8 using the KIVY framework, dedicated to the android system devices, but after compilation it should also work on desktop devices. 
+								
+								The app consists of a simple interface - a toolbar that allows the user to navigate between the two available windows: the list of tasks and the list of products to buy. User is able to add/remove tasks and shopping products.
+								
+								Link to GitHub repository:
+								
+								<a class="button" href="https://github.com/bkochanowski/ToDoMobileApp"><span>To-Do Mobile App repository</span></a>
+								</p>
+							</div>
+							<div class="achievement">
+										<div class="container">
+										  <div class="mySlides">
+											<div class="numbertext">1 / 6</div>
+											<img src="task2.jpg" style="width:65%" class='img-scroll'>
+										  </div>
+
+										  <div class="mySlides">
+											<div class="numbertext">2 / 6</div>
+											<img src="shop.jpg" style="width:65%" class='img-scroll'>
+										  </div>
+										  
+										  <div class="mySlides">
+											<div class="numbertext">3 / 6</div>
+											<img src="sidebar.jpg" style="width:65%" class='img-scroll'>
+										  </div>
+											
+										  <div class="mySlides">
+											<div class="numbertext">4 / 6</div>
+											<img src="aktualizuj.jpg" style="width:65%" class='img-scroll'>
+										  </div>
+										  
+										  <div class="mySlides">
+											<div class="numbertext">5 / 6</div>
+											<img src="newtask.jpg" style="width:65%" class='img-scroll'>
+											</div>
+								
+										  <div class="mySlides">
+											<div class="numbertext">6 / 6</div>
+											<img src="timepicker.jpg" style="width:65%" class='img-scroll'>
+										  </div>
+											
+										  <a class="prev" onclick="plusSlides(-1)">❮</a>
+										  <a class="next" onclick="plusSlides(1)">❯</a>
+
+										</div>
+							</div>
+							<div class="achievement">
+								place for scroll gallery
+							</div>
+
+							<div class="achievement bckgrd">
+								<h3 class="article-header">Web App for filling in surveys and questionnaires</h3>
+								<p class="description_projects">
+								Web application created with Python 3.7, FLASK framework and MySQL database. Simple menu available only to registered users after logging in only. 
+								
+								The admin module allows to add new questionnaires and obtain results from each test filled by users.
+								
+								Link to GitHub repository:
+								
+								<a class="button" href="https://github.com/bkochanowski/MentalTester"><span>Web App for questionnaires repository</span></a>
+							</div>
+						</div>
+					</article>
+			</section>
+		</main>
+<script>
+function init() {
+document.querySelectorAll('.school-title').forEach(item =>item.addEventListener('click', showDescription));
+
+document.querySelectorAll('.menu-element').forEach(item =>item.addEventListener('click', scrollToEvent));
+var swiper = new Swiper('.swiper-container', {
+	pagination: {
+	  el: '.swiper-pagination',
+	  type: 'progressbar',
+	},
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+  });
+}
+function showDescription(event){	
+const parent = event.target.parentElement;
+		parent.classList.toggle('active');
+}
+
+function scrollToEvent(event){
+	const element = document.querySelector('#'+event.target.dataset.name);
+	if (!element) return;
+	element.scrollIntoView({ 
+	behavior: 'smooth'
+});
+}
+window.addEventListener('load', init);
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+</body>
+</html>

@@ -8,7 +8,6 @@
 		* {
 		box-sizing: border-box;
 			}
-		}
 		body {
 		}	
 		.wrapper {
@@ -99,18 +98,21 @@
 				flex-basis: 49%;
 				flex-shrink: 1;
 				padding: 20px;
+				;
 			}
 		.article {
 			padding-left: 20px;
 			}
 		.article-header{
 			color: #b38600;
-			}
+		}
+
 		.bckgrd {
 		background-color: #ccff99;
 		box-shadow: 5px 5px 3px grey;
-		border-radius: 2%;
-			}
+		border-radius: 3%;
+		}
+		
 		.button {
 		  border-radius: 2px;
 		  background-color: green;
@@ -123,14 +125,14 @@
 		  transition: all 0.5s;
 		  cursor: pointer;
 		  margin: 2px;
-			}
+		}
 
 		.button span {
 		  cursor: pointer;
 		  display: inline-block;
 		  position: relative;
 		  transition: 0.5s;
-			}
+		}
 
 		.button span:after {
 		  content: '\00bb';
@@ -139,26 +141,27 @@
 		  top: 0;
 		  right: -20px;
 		  transition: 0.5s;
-			}
+		}
 
 		.button:hover span {
 		  padding-right: 25px;
-			}
+		}
 
 		.button:hover span:after {
 		  opacity: 1;
 		  right: 0;
-			}
+		}
 		/* Slideshow container */
 		.slideshow-container {
 		  max-width: 1000px;
 		  position: relative;
 		  margin: auto;
-			}
+		}
 		.task-mgr {
 		text-align: center;
+		vertical-align: middle;
 		background-color: gray;
-			}
+		}
 
 		/* Next & previous buttons */
 		.prev, .next {
@@ -174,52 +177,85 @@
 		  transition: 0.6s ease;
 		  border-radius: 0 3px 3px 0;
 		  user-select: none;
-			}
+		}
+
 		/* Position the "next button" to the right */
 		.next {
 		  right: 0;
 		  border-radius: 3px 0 0 3px;
-			}
+		}
+
 		/* On hover, add a grey background color */
 		.prev:hover, .next:hover {
 		  background-color: #f1f1f1;
 		  color: black;
-			}
+		}
 		.school-wrapper:hover .school-description{
 			height: auto;
 				max-height: 500px;
 				transition: all 0.5s ease-in;
-			}	
+		}		
 		.school-title{
-			background-color: #e3fdc8;
+			background-color: #ccff99;
 			border: 2px solid gray;
 			cursor: pointer;
 			padding: 10px;
-			box-shadow: 2px 2px 2px grey;
-			}
+		}
 		.school-description{
 			max-height: 0;
 			overflow: hidden;
 			transition: all 0.5s ease-out;
-			}
+		}
 		.grow { 
 		transition: all .2s ease-in-out; 
-			}
+		}
 		.grow:hover { 
 		transform: scale(1.3); 
 		}
+		.enhance { 
+		transition: all .2s ease-in-out; 
+		}
+		.enhance:hover { 
+		transform: scale(1.7); 
+		}
+		.col0 {
+		display: inline;
+		padding-right: 10px;
+		}
 		.col1 {
-			display: inline;
-			/*padding-right: 100px;*/
+		 display: inline;
 		}
 		.col2 {
-			display: inline;
-			color: #006600;
+		  display: inline;
+		  color: #006600;
+
 		}
 		.col3 {
-			display: inline;
-			float: right;
-			color: gray;
+		  display: inline;
+		  float: right;
+		  color: gray;
+		}
+		.arrow {
+		    border: solid black;
+		    border-width: 0 3px 3px 0;
+		    display: inline-block;
+		    padding: 3px;
+		}
+		.down {
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+		}
+		.column {
+		  float: left;
+		  width: 50%;
+		  padding: 10px;
+		}
+
+		/* Clear floats after the columns */
+		.row:after {
+		  content: "";
+		  display: table;
+		  clear: both;
 		}
 	</style>
 </head>
@@ -250,9 +286,9 @@
 		<p>Copyright 2021 ©</p>
 	</nav>
 		<main class='content-wrapper'>
-			<section id="description">
+			<section class='bckgrd' style='padding: 20px' id="description">
 				<h1 class='section-header' >About me:</h1>
-					<article  class="article bckgrd">
+					<article  class="article">
 						<p class="description">
 						I'm a psychologist with few years of experience in work related to statistical analysis and operating on large data sets. 
 						Programming is my hobby. I have knowledge in the field of Python3.x with frameworks: Flask (advanced) and Django (beginner). 
@@ -285,41 +321,48 @@
 							<div class="achievement">
 								<div class="slideshow-container">
 									<div class="mySlides1 task-mgr" >
-									<img src="task2.jpg" class='grow' style="width: 50%">
+									<img src="https://i.postimg.cc/TYn5yn7W/task2.jpg" class='grow' style="width: 60%">
 								  </div>
 								  <div class="mySlides1 task-mgr" >
-									<img src="newtask.jpg" class='grow' style="width: 50%">
+									<img src="https://i.postimg.cc/mhWRfzCv/newtask.jpg" class='grow' style="width: 60%">
 								  </div>
 								  <div class="mySlides1 task-mgr">
-									<img src="shop.jpg" class='grow' style="width: 50%">
+									<img src="https://i.postimg.cc/HWq7s62g/shop.jpg" class='grow' style="width: 60%">
 								  </div>
 								  <div class="mySlides1 task-mgr" >
-									<img src="aktualizuj.jpg" class='grow' style="width: 50%">
+									<img src="https://i.postimg.cc/yxZBbXgh/aktualizuj.jpg" class='grow' style="width: 60%">
 								  </div>
 								  <div class="mySlides1 task-mgr">
-									<img src="sidebar.jpg" class='grow' style="width: 50%">
+									<img src="https://i.postimg.cc/9XR7h6yb/sidebar.jpg" class='grow' style="width: 60%">
 								  </div>
 								<div class="mySlides1 task-mgr">
-									<img src="timepicker.jpg" class='grow' style="width: 50%">
+									<img src="https://i.postimg.cc/6pw2CTgb/timepicker.jpg" class='grow' style="width: 60%">
 								  </div>
 								  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
 								  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
 								</div>
 								</div>
-							<div class="achievement">
-								<div class="slideshow-container">
+							<div class="achievement" style="background-color: gray;">
+								<div class="slideshow-container" >
 								<div class="mySlides2">
-								<img src="xx.jpg" style="width: 100%;" >
-								</div>
-									
-								  <div class="mySlides2">
-									<img src="xxx.jpg" style="width:100%">
+								<img src="https://i.postimg.cc/k5JSPDyR/flask1.jpg" class='enhance' style="width: 100%;" >
+								</div>	
+								  <div class="mySlides2 ">
+									<img src="https://i.postimg.cc/R0gHS9Ps/flask2.jpg" class='enhance' style="width:100%">
 								  </div>
 
 								  <div class="mySlides2">
-									<img src="xxxxx.jpg" style="width:100%">
+									<img src="https://i.postimg.cc/hjh7hw6S/flask3.jpg" class='enhance' style="width:100%">
 								  </div>
-
+								<div class="mySlides2">
+									<img src="https://i.postimg.cc/sxhQ4W3q/flask4.jpg" class='enhance' style="width:100%">
+								  </div>
+								  <div class="mySlides2">
+									<img src="https://i.postimg.cc/kDPV1544/flask5.jpg" class='enhance' style="width:100%">
+								  </div>
+								  <div class="mySlides2">
+									<img src="https://i.postimg.cc/TwS5b0vn/flask7.jpg" class='enhance' style="width:100%">
+								  </div>
 								 <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
 								<a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
 								</div>
@@ -340,44 +383,53 @@
 			</section>
 			<section>
 			<h1 class="section-header" id="education">Education:</h1>
-			<article  class="article">
 				<div class='school-wrapper'>
 				<h3 class='school-title'>
+					<div class="col0"><i class="arrow down"></i></div>
 					<div class="col1">Software Development Academy: </div>
 					<div class="col2">Python from scratch Course</div>
-					<div class="col3">06/2018-03/2019</div>
+					<div class="col3">06/2019-02/2020</div>
 				</h3>
-					<p class="school-description">
-						Course involved such issues as: Python 3.x, Flask and Django Framework, TDD, database SQL, NoSQL, 
-						HTTP protocol, HTML, CSS, JavaScript, SCRUM, GIT
+					<div class="school-description">
+						Course consisted of such issues as: Python 3.x, Flask and Django Framework, TDD, database SQL, NoSQL, 
+						HTTP protocol, HTML, CSS, JavaScript, SCRUM, GIT.
 						
 						Overall course duration: 312 hours.
-					</p>
+						
+						<h3>Course graduation certificate:</h3>
+						<div class="row">
+						  <div class="column" style="background-color:#aaa;">
+						  </div>
+						  <div class="column" style="background-color:#bbb;">
+						  </div>
+						</div>
+					</div>
 				</div>
 				<div class='school-wrapper'>
 					<h3 class='school-title'> 
+						<div class="col0"><i class="arrow down"></i></div>
 						<div class="col1">SWPS Katowice:</div>
 						<div class="col2">Occupational psychology of transportation</div>
 						<div class="col3">10/2013-05/2014</div>
 					</h3>
 					<p class="school-description">
-						Postgraduate studies covered aspects of road safety and transport psychology, including elements of occupational psychology 
+						Postgraduate studies covered topics of road safety and transport psychology, including elements of occupational psychology 
 						and medicine, clinical psychology, personality psychology, cognitive psychology, neuropsychology and related fields, 
-						as well as research methodology, law, entrepreneurship and promotion with a practical approach to the processes of 
-						conducting vehicles.
+						as well as research methodology, law, entrepreneurship and promotion with a practical approach to the aspects of 
+						driving vehicles.
 					</p>
 				</div>
 				<div class='school-wrapper'>
 					<h3 class='school-title'> 
+						<div class="col0"><i class="arrow down"></i></div>
 						<div class="col1">University of Silesia</div>
 						<div class="col2">Psychology master's degree studies</div>
 						<div class="col3">10/2007-02/2013</div>
 					</h3>
 					<p class="school-description">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus maiores cupiditate vel earum facilis ipsum et eius quidem, praesentium est porro illum, magni recusandae vero cum unde laudantium culpa quo.
+						Full-time psychology studies completed with the following specializations: work and organizational psychology, forensic psychology.
 					</p>
 				</div>	
-			</article>	
 			<article class="article">			
 			</section>
 		</main>

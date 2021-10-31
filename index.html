@@ -7,9 +7,7 @@
 	<style>	
 		* {
 		box-sizing: border-box;
-			}
-		body {
-		}	
+			}	
 		.wrapper {
 			display: flex;
 			padding: 10px;
@@ -257,6 +255,21 @@
 		  display: table;
 		  clear: both;
 		}
+		ul.job-description {
+			list-style-type: none;
+			}
+			.job-title {
+			text-transform: capitalize;
+			}
+			.job-title span {
+			color: #889499;
+			text-decoration: underline;
+			}
+		ul.job-description li:before{
+			content: "✔";
+			padding-right: 0.5em;
+			color: #509e98;
+			}
 	</style>
 </head>
 <body class="wrapper">
@@ -279,9 +292,7 @@
 			<div class='animation'>
 				<p class='menu-element grow' data-name="work">Work experience</p>
 			</div>
-			<div class='animation'>
-				<p class='menu-element grow' data-name="interests">Hobby</p>
-			</div>	
+			
 		</div>
 		<p>Copyright 2021 ©</p>
 	</nav>
@@ -290,10 +301,10 @@
 				<h1 class='section-header' >About me:</h1>
 					<article  class="article">
 						<p class="description">
-						I'm a psychologist with few years of experience in work related to statistical analysis and operating on large data sets. 
+						I'm a psychologist with few years of experience in work related with statistical analysis and operating on large data sets. 
 						Programming is my hobby. I have knowledge in the field of Python3.x with frameworks: Flask (advanced) and Django (beginner). 
 						In my projects I experimented with SQL (MySQL, SQLite3) and NoSQL (MongoDB) databases. I know the basics of the SCRUM, KANBAN 
-						and TDD methodology. Currently I am developing a project of a mobile application dedicated for the android platforms using  
+						and TDD methodology. Currently I am developing a project of a mobile application dedicated to the android platforms using  
 						an open source Python library - KIVY.
 						</p>
 						<p class="description">
@@ -309,7 +320,7 @@
 							<div class="achievement bckgrd">
 								<h3 class="article-header">Android application for managing tasks and shopping list: ToDoApp</h3>
 								<p class="description_projects">
-								Mobile application made in Python 3.8 using the KIVY framework, dedicated to the android system devices, but after compilation it should also work on desktop devices. 
+								Mobile application made in Python 3.8 using the KIVY framework, developed for android system devices, but after compilation it should also work on desktop devices. 
 								
 								The app consists of a simple interface - a toolbar that allows the user to navigate between the two available windows: the list of tasks and the list of products to buy. User is able to add/remove tasks and shopping products.
 								
@@ -383,6 +394,7 @@
 			</section>
 			<section>
 			<h1 class="section-header" id="education">Education:</h1>
+				<p>>>hover with cursor to unfold<<</p>
 				<div class='school-wrapper'>
 				<h3 class='school-title'>
 					<div class="col0"><i class="arrow down"></i></div>
@@ -391,18 +403,19 @@
 					<div class="col3">06/2019-02/2020</div>
 				</h3>
 					<div class="school-description">
-						Course consisted of such issues as: Python 3.x, Flask and Django Framework, TDD, database SQL, NoSQL, 
-						HTTP protocol, HTML, CSS, JavaScript, SCRUM, GIT.
+						Course consisted of such issues as:
+						<ul class="job-description">
+							<li>Python 3.x</li>
+							<li>Flask and Django Framework</li>
+							<li>TDD and app testing</li>
+							<li>SQL and NoSQL databases (MYSQL, MongoDB) </li>
+							<li>HTTP protocol</li>
+							<li>HTML, CSS and introduction to JavaScript</li>
+							<li>SCRUM and KANBAN methodologies</li>
+							<li>GIT</li>
+						  </ul> 
 						
 						Overall course duration: 312 hours.
-						
-						<h3>Course graduation certificate:</h3>
-						<div class="row">
-						  <div class="column" style="background-color:#aaa;">
-						  </div>
-						  <div class="column" style="background-color:#bbb;">
-						  </div>
-						</div>
 					</div>
 				</div>
 				<div class='school-wrapper'>
@@ -427,11 +440,61 @@
 						<div class="col3">10/2007-02/2013</div>
 					</h3>
 					<p class="school-description">
-						Full-time psychology studies completed with the following specializations: work and organizational psychology, forensic psychology.
+						Full-time psychology studies with the following specializations: work and organizational psychology, forensic psychology.
 					</p>
-				</div>	
-			<article class="article">			
+				</div>		
 			</section>
+			<section id="work">
+				<h1 >Work experience</h1>
+				<article>
+				  <div class='job-title'>
+					<span>07.2018 - 11.2021</span> <strong>Szpital Zakonu Bonifratów w Katowicach sp. z o.o.</strong><br> <strong>Position:</strong> Psychologist
+				  </div>
+				  <div>
+					<ul class="job-description">
+					  <li>providing psychological help for patients and hospital staff</li>
+					  <li>soft skills trainings for personnel</li>
+					  <li>assistance in examining patienents complaints and applications</li>
+					  <li>member of hospital's ethics committee</li>
+					</ul>
+				  </div>
+				  <div class='job-title'>
+					<span>05.2016 - 09.2019</span> <strong>NZOZ AGMED sp. z o.o.</strong><br> <strong>Position:</strong> Occupational health psychologist
+				  </div>
+				  <div>
+					<ul class="job-description">
+						<li>conducting psychological evaluation of workers operating heavy machinery</li>
+						<li>psychological examination of candidates aspiring of becoming the proffesional drivers.</li>
+					</ul>
+				  </div>
+				  <div class='job-title'>
+					<span>11.2015 - 07.2018</span> <strong>Grupa Gumułka - Euroedukacja sp. z o.o.</strong><br> <strong>Position:</strong> Project Team Specialist
+				  </div>
+				  <div>
+					<ul class="job-description">
+					  <li>coordinating the implementation of audit projects</li>
+					  <li>evaluation of the company's own services</li>
+					  <li>support for tasks carried out by other company's departments</li>
+					  <li>conducting employee recruitment and selection projects</li>
+					  <li>maintaining an internal database of candidates</li>
+					  <li>evaluation of employees' skills and quality of work</li>
+					</ul>
+				  </div>
+				  <div class='job-title'>
+					<span>10.2013 - 09.2015</span> <strong>Grupa Gumułka sp. z o.o.</strong><br> <strong>Position:</strong> Junior Development Consultant
+				  </div>
+				  <div>
+					<ul class="job-description">
+					  <li>direct search recruitment</li>
+					  <li>organizing trainings and company events</li>
+					  <li>support for tasks carried out by other company's departments</li>
+					  <li>conducting employee recruitment and selection projects</li>
+					  <li>maintaining an internal database of candidates</li>
+					  <li>evaluation of employees' training needs</li>
+					</ul>
+				  </div>
+				</article>
+			  </section>
 		</main>
 <script>
 function init() {
